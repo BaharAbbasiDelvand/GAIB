@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#textInputContainer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-top: 2px dashed blueviolet;
+  width: 300px;
+  margin: 0;
+  display: flex;
+  
+
+}
+
+#textInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px dashed blueviolet;
+  border-radius: 4px;
+  margin-top: 8px;
+  background-color: antiquewhite;
+  color: rgb(255, 0, 136);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.button-modified {
+  width: 50px;
+  background-color: pink;
+}
+
+.css-sghohy-MuiButtonBase-root-MuiButton-root {
+  background-color: pink;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  margin-top: -8px; /* Adjust the margin-top for the button */
+}
+

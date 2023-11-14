@@ -1,0 +1,21 @@
+/* nav.css */
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    width: 15%;
+    border: thick double blueviolet;
+  }
+  
+  /* Add additional styling for each individual div if needed */
+  .tutorial,
+  .about,
+  .privacy,
+  .chat {
+    /* Add any specific styles for each div */
+    margin: 5px; /* Example margin for spacing between divs */
+
+    color: rgb(255, 0, 136);
+  }
+  

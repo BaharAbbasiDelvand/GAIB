@@ -1,0 +1,16 @@
+button {
+    font-size: 25px;
+    background-color: rgb(255, 0, 149);
+    color: darkblue;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    align-items: center;
+    margin-top: 3%;
+  }
+  
+  button:hover {
+    color: rgb(255, 0, 149);
+    background-color: darkblue;
+  }
+  
