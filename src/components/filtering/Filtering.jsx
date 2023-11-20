@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Button} from '@mui/material'
 import "./filtering.css";
 const DropdownCheckboxComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,9 +23,18 @@ const DropdownCheckboxComponent = () => {
 
   return (
     <div className="dropdown-checkbox-container">
-      <button onClick={toggleDropdown} className="dropdown-button">
+      <Button variant="contained" onClick={toggleDropdown} className="dropdown-button" sx={{
+          backgroundColor: '#17CB49',
+          color: "black",
+          '&:hover': {
+            backgroundColor: '#128F2C', // Change color on hover
+          },
+          '&:active': {
+            backgroundColor: '#0D6A20', // Change color on click
+          },
+        }}>
         {isOpen ? "Close Filters" : "Filter options"}
-      </button>
+      </Button>
       {isOpen && (
         <div className="checkbox-dropdown">
           <label>
@@ -33,7 +43,7 @@ const DropdownCheckboxComponent = () => {
               checked={checkboxes.option1}
               onChange={() => handleCheckboxChange("option1")}
             />
-            Option 1
+            testcase 1
           </label>
           <label>
             <input
@@ -41,7 +51,7 @@ const DropdownCheckboxComponent = () => {
               checked={checkboxes.option2}
               onChange={() => handleCheckboxChange("option2")}
             />
-            Option 2
+            testcase 2
           </label>
           <label>
             <input
@@ -49,7 +59,7 @@ const DropdownCheckboxComponent = () => {
               checked={checkboxes.option3}
               onChange={() => handleCheckboxChange("option3")}
             />
-            Option 3
+            testcase 3
           </label>
           <label>
             <input
@@ -57,7 +67,7 @@ const DropdownCheckboxComponent = () => {
               checked={checkboxes.option4}
               onChange={() => handleCheckboxChange("option4")}
             />
-            Option 4
+            testcase 4
           </label>
         </div>
       )}

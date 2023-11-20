@@ -1,34 +1,45 @@
-// GitHubTextBox.js
 
-import React, { useState } from 'react';
-import './giturl.css';
+import React, { useState } from "react";
+import "./giturl.css";
+import { Button, TextField, InputAdornment, colors } from "@mui/material";
 
 const GitHubTextBox = ({ onSubmit }) => {
-  const [githubUrl, setGithubUrl] = useState('');
+  const [githubUrl, setGithubUrl] = useState("");
 
   const handleChange = (event) => {
     setGithubUrl(event.target.value);
   };
 
   const handleSubmit = () => {
-    if (typeof onSubmit === 'function') {
-      onSubmit(githubUrl);
-      // Optionally, you may want to clear the input after submission
-      setGithubUrl('');
-    } else {
-      console.error("onSubmit prop is not a function");
+      setGithubUrl("");
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.code === "Enter") {
+      setGithubUrl("");
+      return;
     }
   };
 
   return (
     <div className="github-textbox-container">
-      <input
-        type="text"
-        placeholder="Enter GitHub URL"
-        value={githubUrl}
+      <TextField
+      required
+      label="Required"
+      defaultValue="Hello World"
+        variant="filled"
+        className="github-text"
+        id="outlined-start-adornment"
+        sx={{ m: 1}}
+        placeholder="Enter your Github repository"
+        value = {githubUrl}
         onChange={handleChange}
+        onKeyDown={(event) => handleKeyDown(event)}
+        InputProps={{
+          startAdornment: <InputAdornment position="start">https://github.com/</InputAdornment>,
+        }}
       />
-      <button onClick={handleSubmit}>Submit</button>
+      <Button className= 'KLR' onClick={handleSubmit} variant = "contained" sx={{backgroundColor: '#168FFF'}}>Submit</Button>
     </div>
   );
 };

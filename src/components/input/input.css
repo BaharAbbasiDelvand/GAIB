@@ -5,47 +5,24 @@ body {
   flex-direction: column;
 }
 
-#textInputContainer {
+.textInputContainer {
+  padding-top: 70px;
   display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
-  border-top: 2px dashed blueviolet;
-  width: 300px;
-  margin: 0;
-  display: flex;
-  
-
+  flex-direction: row;
 }
 
 #textInput {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px;
-  font-size: 16px;
-  border: 2px dashed blueviolet;
+  background-color: white;
+  color: radial-gradient(circle, rgba(0,5,65,1) 36%, rgba(3,6,47,1) 98%);
   border-radius: 4px;
-  margin-top: 8px;
-  background-color: antiquewhite;
-  color: rgb(255, 0, 136);
-  width: 100%;
-  box-sizing: border-box;
 }
 
-.button-modified {
-  width: 50px;
-  background-color: pink;
-}
-
-.css-sghohy-MuiButtonBase-root-MuiButton-root {
-  background-color: pink;
-}
-
-.buttonContainer {
-  display: flex;
-  justify-content: center; /* Center the button horizontally */
-  margin-top: -8px; /* Adjust the margin-top for the button */
+.submit-button {
+  background-color: #add7ff;
 }
 

@@ -1,0 +1,11 @@
+/* GitHubTextBox.css */
+
+.upload {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0%;
+    
+}

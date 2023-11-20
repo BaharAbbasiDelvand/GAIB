@@ -2,22 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Filtering from './components/filtering/Filtering'
+import Filtering from './components/filtering/Filtering';
 import Nav from './components/navbar/Nav';
-import Input from './components/input/Input'
+import Input from './components/input/Input';
 import reportWebVitals from './reportWebVitals';
-import Stats from './components/stats/Stats'
-import Giturl from './components/githuburl/Giturl'
+import Stats from './components/stats/Stats';
+import Giturl from './components/githuburl/Giturl';
+import Upload from './components/upload/Upload';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <Nav />
-    <Input />
     <Filtering />
-    <Stats />
+    <Upload />
+    <Input />
     <Giturl />
+    <Stats />
+    <Nav />
+
   </React.StrictMode>
 );
 

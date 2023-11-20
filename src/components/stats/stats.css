@@ -1,25 +1,26 @@
 /* stats.css */
 
 .stats-container {
-    display: flex;
-    margin-top: 20%;
-    justify-content: space-around;
-    padding: 20px;
-  }
-  
-  .stat {
-    text-align: center;
-  }
-  
-  .stat-value {
-    font-size: 24px;
-    font-weight: bold;
-    color: rgb(255, 0, 149);
-  }
-  
-  .stat-label {
-    font-size: 14px;
-    color: rgb(7, 215, 7);
-    margin-top: 8px;
-  }
-  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 6%;
+  padding-bottom: 60px;
+}
+
+.stat {
+  text-align: center;
+  margin: 0 15px; /* Adjust the margin as needed */
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #168FFF;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: white;
+  margin-top: 8px;
+}
