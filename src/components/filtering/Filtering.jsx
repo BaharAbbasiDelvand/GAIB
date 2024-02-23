@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {Button} from '@mui/material'
 import "./filtering.css";
-const DropdownCheckboxComponent = () => {
+const Filtering = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [checkboxes, setCheckboxes] = useState({
     option1: false,
@@ -75,4 +75,4 @@ const DropdownCheckboxComponent = () => {
   );
 };
 
-export default DropdownCheckboxComponent;
+export default Filtering;
