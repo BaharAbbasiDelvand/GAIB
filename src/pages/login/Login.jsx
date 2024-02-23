@@ -30,7 +30,7 @@ const navigate = useNavigate();
       <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
       <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
       <button onClick={handleLogin}>Login</button>
-      <a onClick={handleNavigate} style={{color: "white", cursor: "pointer"}}>Click here to navigate</a>
+      <a onClick={handleNavigate} style={{color: "blue", cursor: "pointer"}}>Click here to navigate</a>
     </div>
   );
 };
