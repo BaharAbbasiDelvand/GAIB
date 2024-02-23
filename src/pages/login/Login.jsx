@@ -1,19 +1,22 @@
 // Login.js
 import React, { useState } from 'react';
-// import { useHistory } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-
+import {TextField, Button} from '@mui/material';
+import "./login.css"
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-//   const history = useHistory();
+
+  const handleUser = (e) => {
+    setUsername(e.target.value);
+  };
+  const handlePass = (e) => {
+    setPassword(e.target.value);
+  };
 const navigate = useNavigate();
 
   const handleLogin = () => {
-    // Check credentials (you can replace this with your authentication logic)
     if (username === 'yourusername' && password === 'yourpassword') {
-      // Redirect to main page if login is successful
-    //   history.push('/main');
     } else {
       alert('Invalid credentials');
     }
@@ -23,14 +26,37 @@ const navigate = useNavigate();
     console.log("clicked");
     navigate("../");
 }
-
+const handleRegister = () => {
+  console.log("clicked");
+  navigate("../register");
+}
   return (
     <div>
       <h2>Login</h2>
-      <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      <button onClick={handleLogin}>Login</button>
-      <a onClick={handleNavigate} style={{color: "blue", cursor: "pointer"}}>Click here to navigate</a>
+      <TextField
+          required
+          sx={{ m: 1, width: "600px", backgroundColor: "white", borderRadius: "12px" }}
+          className="user"
+          id="outlined-required"
+          value={username}
+          placeholder="Enter Username"
+          label="Required"
+          onChange={handleUser}
+        />
+      <TextField
+          id="outlined-password-input"
+          sx={{ m: 1, width: "600px", backgroundColor: "white", borderRadius: "12px" }}
+          className='pass'
+          label="Password"
+          type="password"
+          autoComplete="current-password"
+          value={password}
+          placeholder="Enter Password"
+          onChange={handlePass}
+        />
+      <Button variant="outlined" onClick={handleNavigate}>Log in</Button>
+      <Button color="secondary" onClick={handleRegister}>Register</Button>
+      {/* <a onClick={handleNavigate} style={{color: "blue", cursor: "pointer"}}>Click here to navigate</a> */}
     </div>
   );
 };
