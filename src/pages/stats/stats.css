@@ -1,0 +1,42 @@
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20%;
+  /* padding-bottom: 60px; */
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20%; 
+}
+
+.stat {
+  text-align: center;
+  margin: 0 15px; 
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FF8911;
+  width: 400px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #FFF7F1;
+  margin-top: 8px;
+  width: 400px;
+
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
+}

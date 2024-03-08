@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Button, TextField, InputAdornment } from '@mui/material';
 import "./input.css";
+import { useNavigate } from 'react-router-dom';
 
 const TextInputComponent = () => {
   const [inputValue, setInputValue] = useState("");
@@ -21,7 +22,12 @@ const TextInputComponent = () => {
       return;
     }
   };
+  const nav = useNavigate();
 
+  const handleNav = () => {
+  console.log("clicked");
+  nav("../stats");
+}
   return (
     <div className="textInputContainer">
       
@@ -32,11 +38,10 @@ const TextInputComponent = () => {
         value={inputValue}
         placeholder="Enter code here"
         onChange={handleInputChange}
-        onKeyDown={(event) => handleKeyDown(event)}
         multiline
         maxRows={3}
       />     
-      <Button onClick={handleSubmit} className='submit-button' variant="contained" sx={{backgroundColor: '#168FFF'}}>Submit</Button>
+      <Button onClick={handleNav} className='submit-button' variant="contained" sx={{backgroundColor: '#168FFF'}}>Submit</Button>
     </div>
   );
 };

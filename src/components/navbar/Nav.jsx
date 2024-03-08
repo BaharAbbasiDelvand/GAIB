@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./nav.css";
+import { useNavigate } from 'react-router-dom';
 
 const Nav = () => {
   const [activeLink, setActiveLink] = useState(null);
+  const navigate = useNavigate()
 
+  const handleNavigate = () => {
+      console.log("clicked");
+      navigate("./chatbot");
+  }
   const handleLinkClick = (link) => {
     setActiveLink(link);
   };
@@ -34,7 +40,7 @@ const Nav = () => {
       <a href="#privacy" onClick={() => handleLinkClick("Privacy Policy")} className="privacy">
         Privacy Policy
       </a>
-      <a href="#chat" onClick={() => handleLinkClick("Assistant Chat")} className="chat">
+      <a href="#chat" onClick={() => handleNavigate("Assistant Chat")} className="chat">
         Assistant Chat
       </a>
 

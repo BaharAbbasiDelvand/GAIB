@@ -24,10 +24,10 @@ const Filtering = () => {
   return (
     <div className="dropdown-checkbox-container">
       <Button variant="contained" onClick={toggleDropdown} className="dropdown-button" sx={{
-          backgroundColor: '#17CB49',
-          color: "black",
+          backgroundColor: '#FF8911',
+          color: "#FFF7F1",
           '&:hover': {
-            backgroundColor: '#128F2C', // Change color on hover
+            backgroundColor: '#FDBF60', // Change color on hover
           },
           '&:active': {
             backgroundColor: '#0D6A20', // Change color on click

@@ -8,13 +8,12 @@ const UploadFile = () => {
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     setSelectedFile(file);
-    // perform additional actions with the selected file here
   };
 
   return (
     <div className="upload">
       <Input
-        accept=".js" // Specify the allowed file types if necessary
+        accept=".js" 
         type="file"
         id="upload-input"
         onChange={handleFileChange}

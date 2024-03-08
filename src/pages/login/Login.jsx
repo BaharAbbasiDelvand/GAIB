@@ -1,8 +1,8 @@
-// Login.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {TextField, Button} from '@mui/material';
 import "./login.css"
+import background from '../../Backgrounds/bg2.png'
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -31,8 +31,9 @@ const handleRegister = () => {
   navigate("../register");
 }
   return (
-    <div>
-      <h2>Login</h2>
+    <div style={{ width: '100%', height: '100vh', display: "flex", flexDirection: 'column', alignItems: 'center', justifyContent: "center", backgroundColor: '',backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+
+      <h2 className='loglog'>Login</h2>
       <TextField
           required
           sx={{ m: 1, width: "600px", backgroundColor: "white", borderRadius: "12px" }}
@@ -40,7 +41,7 @@ const handleRegister = () => {
           id="outlined-required"
           value={username}
           placeholder="Enter Username"
-          label="Required"
+          label="Username"
           onChange={handleUser}
         />
       <TextField
@@ -54,8 +55,8 @@ const handleRegister = () => {
           placeholder="Enter Password"
           onChange={handlePass}
         />
-      <Button variant="outlined" onClick={handleNavigate}>Log in</Button>
-      <Button color="secondary" onClick={handleRegister}>Register</Button>
+      <Button variant="outlined" sx = {{marginTop: '3%'}} onClick={handleNavigate}>Log in</Button>
+      <Button color="secondary" sx = {{marginTop: '3%'}} onClick={handleRegister}>Register</Button>
       {/* <a onClick={handleNavigate} style={{color: "blue", cursor: "pointer"}}>Click here to navigate</a> */}
     </div>
   );

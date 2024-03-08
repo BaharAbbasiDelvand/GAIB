@@ -8,8 +8,8 @@
     padding: 8px;
     display: flex;
     align-items: center;
-    background-color: #17cb49;
-    color: white;
+    background-color: #FF8911;
+    color: #FFF7F1;
     border: none;
     cursor: pointer;
 }
@@ -19,7 +19,7 @@
     align-items: center;
     top: 100%;
     right: 0;
-    background-color: #17cb49;
+    background-color: #FF8911;
     border-radius: 4px;
     padding: 8px;
 
