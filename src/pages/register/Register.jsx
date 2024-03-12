@@ -7,7 +7,7 @@ const Register = () => {
     const [user, setUser] = useState('');
     const [pass, setPass] = useState('');
     const [repo, setRepo] = useState('');
-    const [token, setToken] = useState('');
+    
     const [email, setEmail] = useState('');
     const [confirm, setConfirm] = useState('');
 
@@ -21,9 +21,7 @@ const Register = () => {
 const handleGitRepo = (e) => {
     setRepo(e.target.value);
 };
-const handleAccessToken = (e) => {
-    setToken(e.target.value);
-};
+
 const handleEmail = (e) => {
     setEmail(e.target.value);
 };
@@ -91,19 +89,11 @@ const handleLogin = () => {
         className="gitrepo"
         id="outlined-required"
         value={repo}
-        placeholder="Enter GitHub Repo"
-        label="GitHub Repo"
+        placeholder="Enter the Link to Your GitHub Account"
+        label="GitHub Link"
         onChange={handleGitRepo}
-        /><TextField
-        required
-        sx={{ m: 1, width: "600px", backgroundColor: "white", borderRadius: "12px" }}
-        className="accesstoken"
-        id="outlined-required"
-        value={token}
-        placeholder="Enter GitHub Access Token"
-        label="GitHub Access Token"
-        onChange={handleAccessToken}
         />
+        
         
         <Button color="secondary" variant= "outlined" sx = {{marginTop: '5%'}} onClick={handleNav}>Register</Button>
         <Button color="primary" sx = {{marginTop: '3%'}} onClick={handleLogin}> <p>Already have an account?</p> Log in</Button>
