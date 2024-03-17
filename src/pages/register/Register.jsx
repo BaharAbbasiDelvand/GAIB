@@ -8,10 +8,10 @@ import { sendRegister } from "../../apis/Auth";
 const Register = () => {
     const [userData, setUserData] = useState({
         email: "",
-        password: "",
+        password: "", 
         confirm_password: "",
     });
-    const [disableButton, setDisableButton] = useState(true)
+    const [disableButton, setDisableButton] = useState(true);
 
     const handleInputChange = (event) => {
         const {
@@ -22,8 +22,17 @@ const Register = () => {
     const nav = useNavigate();
 
     const handleRegister = () => {
-        sendRegister({userData})
-        // nav("../main");
+        const promise = sendRegister({ userData });
+        promise.then((result) => {
+            if (result?.user_id) {
+                nav(`../main/${result.user_id}`);
+            }
+        });
+        setUserData({
+            email: "",
+            password: "",
+            confirm_password: "",
+        });
     };
     const handleLogin = () => {
         console.log("clicked");
@@ -31,13 +40,16 @@ const Register = () => {
     };
 
     useEffect(() => {
-        console.log(userData)
-        if (userData.email !== "" && userData.password !== "" && userData.confirm_password !== ""){
-            setDisableButton(false)
-            return
+        if (
+            userData.email !== "" &&
+            userData.password !== "" &&
+            userData.confirm_password !== ""
+        ) {
+            setDisableButton(false);
+            return;
         }
-        setDisableButton(true)
-    }, [userData])
+        setDisableButton(true);
+    }, [userData]);
 
     return (
         <div
