@@ -1,0 +1,29 @@
+.loginreglink{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+    margin-top: 2%;
+    margin-left: 35%;
+    margin-right: 35%;
+    color: #EFFCFF;
+}
+.down{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+.text{
+    color: #EFFCFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}

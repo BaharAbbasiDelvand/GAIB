@@ -24,7 +24,7 @@ const navigate = useNavigate();
 
   const handleNavigate = () => {
     console.log("clicked");
-    navigate("../");
+    navigate("../main");
 }
 const handleRegister = () => {
   console.log("clicked");
@@ -56,7 +56,7 @@ const handleRegister = () => {
           onChange={handlePass}
         />
       <Button variant="outlined" sx = {{marginTop: '3%'}} onClick={handleNavigate}>Log in</Button>
-      <Button color="secondary" sx = {{marginTop: '3%'}} onClick={handleRegister}>Register</Button>
+      <Button variant="outlined" sx = {{marginTop: '3%'}} onClick={handleRegister}>Don't Have an Account yet? click here to Register</Button>
       {/* <a onClick={handleNavigate} style={{color: "blue", cursor: "pointer"}}>Click here to navigate</a> */}
     </div>
   );
