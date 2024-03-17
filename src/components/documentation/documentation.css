@@ -1,5 +1,5 @@
 
-.navbar {
+.documentation-container {
     display: flex;
     flex-direction: row;
     align-items: flex-start; 
@@ -8,15 +8,6 @@
     margin-top: 10%;
   }
   
-  .tutorial,
-  .about,
-  .privacy,
-  .chat {
-    margin: 5px; 
-    position: sticky; 
-    position: bottom;
-    color: #17CB49;
-  }
 
 .popup-overlay {
   position: fixed;
@@ -31,7 +22,7 @@
 }
 
 .popup {
-  background: white;
+  background: #EFFCFF;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);

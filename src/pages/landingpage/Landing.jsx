@@ -2,7 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import DownloadButton from "../../components/download/Download";
 import './landing.css';
+import Documentation from "../../components/documentation/Documentation";
 import {TextField, Button} from '@mui/material';
+import Faq from "../../components/FAQ/Faq";
 const LandingPage =() => {
     
     const navigate = useNavigate()
@@ -11,7 +13,7 @@ const LandingPage =() => {
         navigate("./register");
     }
     return(
-        <div>
+        <div className="landing-container">
             <h1 className="text">
                 Welcome to GenAI's Testbot!
             </h1>
@@ -27,6 +29,12 @@ const LandingPage =() => {
             </p>
             <div className="down" > 
                 <DownloadButton/>
+            </div>
+            <div>
+                <Documentation/>
+            </div>
+            <div> 
+                <Faq />
             </div>
             
         </div>

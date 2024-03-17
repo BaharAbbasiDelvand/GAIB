@@ -1,15 +1,9 @@
 import React, { useState } from "react";
 import "./documentation.css";
-import { useNavigate } from 'react-router-dom';
-
-const Nav = () => {
+import {TextField, Button} from '@mui/material';
+const Documentation = () => {
   const [activeLink, setActiveLink] = useState(null);
-  const navigate = useNavigate()
 
-  const handleNavigate = () => {
-      console.log("clicked");
-      navigate("./chatbot");
-  }
   const handleLinkClick = (link) => {
     setActiveLink(link);
   };
@@ -26,22 +20,10 @@ const Nav = () => {
   };
 
   return (
-    <div className="navbar">
-      {/* <a href="#howItWorks" onClick={() => handleLinkClick("How It Works")} className="tutorial">
-        How It Works
-      </a>
-      <a href="#about" onClick={() => handleLinkClick("About")} className="about">
-        About
-      </a> */}
-      <a href="#docu" onClick={() => handleLinkClick("Documentation")} className="about">
-        Documentation
-      </a>
-      {/* <a href="#privacy" onClick={() => handleLinkClick("Privacy Policy")} className="privacy">
-        Privacy Policy
-      </a> */}
-      <a href="#chat" onClick={() => handleNavigate("Assistant Chat")} className="chat">
-        Assistant Chat/FAQ
-      </a>
+    <div className="documentation-container">
+      <Button variant="contained" sx={{backgroundColor:'#D40000'}} onClick={() => handleLinkClick("Documentation")} className="documentation">
+      Documentation
+      </Button>
 
       {activeLink && (
         <div className="popup-overlay" onClick={handleOverlayClick}>
@@ -57,4 +39,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Documentation;

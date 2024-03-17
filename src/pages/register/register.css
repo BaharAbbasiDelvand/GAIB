@@ -1,10 +1,11 @@
 .container {
-    border: 2px solid black; 
     border-radius: 10px; 
     width: fit-content; 
-    
+    background: rgb(3,6,55);
+    background: linear-gradient(0deg, rgba(3,6,55,1) 51%, rgba(10,47,84,1) 85%);
   }
   
-.loglog{
-  color: #FFF7F1
+.registerheader{
+  color: #EFFCFF
 }
+

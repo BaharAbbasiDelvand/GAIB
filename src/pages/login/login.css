@@ -1,8 +1,16 @@
 .user{
-    background-color: #FFFFFF;
-    color: black;
+    background-color: #EFFCFF;
+    color: #030637;
 }
 .pass{
-    background-color: #FFFFFF;
-    color: black;
+    background-color: #EFFCFF;
+    color: #030637;
+}
+
+.background{
+    background: rgb(3,6,55);
+    background: linear-gradient(0deg, rgba(3,6,55,1) 51%, rgba(10,47,84,1) 85%);
+}
+.loginheader{
+    color: #EFFCFF;
 }

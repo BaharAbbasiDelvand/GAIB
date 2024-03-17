@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./register.css";
-import bg from "../../Backgrounds/bg3.png";
 import { TextField, Button } from "@mui/material";
 import { useEffect } from "react";
 import { sendRegister } from "../../apis/Auth";
@@ -52,28 +51,24 @@ const Register = () => {
     }, [userData]);
 
     return (
-        <div
+        <div className="container"
             style={{
-                // border: "2px solid purple",
                 width: "100%",
                 height: "100vh",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                // backgroundImage: `url(${bg})`,
-                // backgroundSize: "cover",
-                // backgroundPosition: "center",
                 backgroundColor: "#030637",
             }}
         >
-            <h2 className="loglog">Registration:</h2>
+            <h2 className="registerheader">Registration:</h2>
             <TextField
                 required
                 sx={{
                     m: 1,
                     width: "600px",
-                    backgroundColor: "white",
+                    backgroundColor: "#EFFCFF",
                     borderRadius: "12px",
                 }}
                 className="email"
@@ -89,12 +84,13 @@ const Register = () => {
                 sx={{
                     m: 1,
                     width: "600px",
-                    backgroundColor: "white",
+                    backgroundColor: "#EFFCFF",
                     color: "white",
                     borderRadius: "12px",
                 }}
                 className="password"
                 label="Password"
+                // InputLabelProps={{style:{color:'white'}}}
                 type="password"
                 autoComplete="current-password"
                 value={userData.password}
@@ -107,8 +103,8 @@ const Register = () => {
                 sx={{
                     m: 1,
                     width: "600px",
-                    backgroundColor: "white",
-                    color: "white",
+                    backgroundColor: "#EFFCFF",
+                    color: "#EFFCFF",
                     borderRadius: "12px",
                 }}
                 className="confirm-password"
@@ -122,21 +118,24 @@ const Register = () => {
             />
 
             <Button
-                color="secondary"
                 variant="outlined"
-                sx={{ marginTop: "5%" }}
-                onClick={handleRegister}
+                
                 disabled={disableButton}
+                sx={{ marginTop: "5%", "&:disabled": {
+                    backgroundColor: "#EFFCFF"
+                }}}
+                onClick={handleRegister}
             >
                 Register
             </Button>
             <Button
+                
                 color="primary"
                 sx={{ marginTop: "3%" }}
                 onClick={handleLogin}
             >
                 {" "}
-                <p>Already have an account?</p> Log in
+                <p>Already have an account?  Log in</p>
             </Button>
         </div>
     );
