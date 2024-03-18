@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./documentation.css";
 import {TextField, Button} from '@mui/material';
+import Popup from "../documentation-text/Popup";
 const Documentation = () => {
   const [activeLink, setActiveLink] = useState(null);
 
@@ -31,7 +32,7 @@ const Documentation = () => {
             <span className="close" onClick={closePopup}>
               &times;
             </span>
-            <p>{activeLink}</p>
+            <Popup/>
           </div>
         </div>
       )}

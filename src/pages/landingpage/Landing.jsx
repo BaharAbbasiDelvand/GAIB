@@ -8,34 +8,40 @@ import Faq from "../../components/FAQ/Faq";
 const LandingPage =() => {
     
     const navigate = useNavigate()
-    const handleNavigate = () => {
+    const handleRegister = () => {
         console.log("clicked");
         navigate("./register");
     }
+    // const handleFaq = () => {
+    //     console.log("clicked");
+    //     navigate("./FAQ");
+    // }
     return(
         <div className="landing-container">
             <h1 className="text">
                 Welcome to GenAI's Testbot!
             </h1>
-            <p className="text">
-                What this testbot does is djhdkjhd
-            </p>
+            <h3 className="text">
+                We help generate testcases for your code!
+            </h3>
             <p className="text">Click here to login to your account, or register to be able to --------------------------------------------------------------------------------------------!</p>
             <div className="loginreglink">
-            <Button onClick={handleNavigate} style={{cursor: "pointer", color:'#EFFCFF', backgroundColor:'#1976D2'}}> Get started! </Button>
+            <Button onClick={handleRegister} style={{cursor: "pointer", color:'#EFFCFF', backgroundColor:'#1976D2'}}> Get started! </Button>
             </div>
             <p className="text">
             You can click here to download the extension! by downloading the extension, you can run and generate the testcases all in your VSCode environment!
             </p>
-            <div className="down" > 
+            <div className="down" style={{'&:hover': { backgroundColor: '#D40000', borderColor: '#030637', boxShadow: 'none',},}}> 
                 <DownloadButton/>
             </div>
             <div>
                 <Documentation/>
             </div>
-            <div> 
-                <Faq />
-            </div>
+
+            
+            {/* <div className="Faq-button"> 
+            <Button onClick={handleFaq} style={{cursor: "pointer", color:'white', backgroundColor:'#FB8500', marginTop:'10%'}}> FAQs </Button>
+            </div> */}
             
         </div>
     )

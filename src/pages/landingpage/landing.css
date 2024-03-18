@@ -31,4 +31,14 @@
 .landing-container{
     background: rgb(3,6,55);
     background: linear-gradient(rgba(3,6,55,1) 13%, rgba(10,47,84,1) 100%);
+    min-height: 100vh;
+}
+
+.Faq-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35%;
+    margin-right: 35%;
 }

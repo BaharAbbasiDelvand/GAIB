@@ -1,11 +1,19 @@
+.all{
+  background: rgb(3,6,55);
+  background: linear-gradient(0deg, rgba(3,6,55,1) 51%, rgba(10,47,84,1) 85%);
+}
+
 .container {
     border-radius: 10px; 
     width: fit-content; 
-    background: rgb(3,6,55);
-    background: linear-gradient(0deg, rgba(3,6,55,1) 51%, rgba(10,47,84,1) 85%);
+
   }
   
 .registerheader{
   color: #EFFCFF
 }
-
+.back-button{
+    position: absolute;
+    top: 30px;
+    left: 10px;
+}

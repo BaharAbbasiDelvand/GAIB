@@ -1,15 +1,25 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./register.css";
-import { TextField, Button } from "@mui/material";
+import { TextField, Button, Snackbar, Alert, SnackbarContent } from "@mui/material";
 import { useEffect } from "react";
 import { sendRegister } from "../../apis/Auth";
+
 const Register = () => {
+    const navigate = useNavigate()
+    const handleBack = () => {
+        console.log("clicked");
+        navigate("/");
+    }
     const [userData, setUserData] = useState({
         email: "",
         password: "", 
         confirm_password: "",
     });
+    const [openSnackbar, setOpenSnackbar] = useState(false); // State to control Snackbar visibility
+
+    const [error, setError] = useState(null);
+
     const [disableButton, setDisableButton] = useState(true);
 
     const handleInputChange = (event) => {
@@ -26,6 +36,10 @@ const Register = () => {
             if (result?.user_id) {
                 nav(`../main/${result.user_id}`);
             }
+            else{
+                setError('The user already exists, or an incorrect form of email address was input.');
+                setOpenSnackbar(true);
+            }
         });
         setUserData({
             email: "",
@@ -33,6 +47,9 @@ const Register = () => {
             confirm_password: "",
         });
     };
+    const handleSnackbarClose=()=>{
+        setOpenSnackbar(false);
+    }
     const handleLogin = () => {
         console.log("clicked");
         nav("../login");
@@ -51,6 +68,10 @@ const Register = () => {
     }, [userData]);
 
     return (
+        <div className="all">
+            <div className="back-button">
+        <Button variant="outlined" sx={{color:'#EFFCFF', border:'1px solid #EFFCFF;'}} className="back-button" onClick={handleBack}> Back</Button>
+        </div>
         <div className="container"
             style={{
                 width: "100%",
@@ -59,9 +80,10 @@ const Register = () => {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                backgroundColor: "#030637",
+                
             }}
         >
+        
             <h2 className="registerheader">Registration:</h2>
             <TextField
                 required
@@ -79,6 +101,7 @@ const Register = () => {
                 onChange={handleInputChange}
                 name="email"
             />
+            
             <TextField
                 id="outlined-password-input"
                 sx={{
@@ -116,7 +139,15 @@ const Register = () => {
                 onChange={handleInputChange}
                 name="confirm_password"
             />
-
+            <Snackbar
+                open={openSnackbar}
+                autoHideDuration={6000}
+                onClose={handleSnackbarClose}
+                style={{ zIndex: 9999 }}
+            >
+                <Alert severity="error">{error}</Alert>
+                {/* <SnackbarContent sx={{color:'EFFCFF'}} message={error} /> */}
+            </Snackbar>
             <Button
                 variant="outlined"
                 
@@ -137,6 +168,7 @@ const Register = () => {
                 {" "}
                 <p>Already have an account?  Log in</p>
             </Button>
+        </div>
         </div>
     );
 };

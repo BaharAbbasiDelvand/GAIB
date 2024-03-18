@@ -2,17 +2,25 @@
 //imports needed for the file
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { TextField, Button } from "@mui/material";
+import { TextField, Button, Snackbar, SnackbarContent, Alert } from "@mui/material";
 import "./login.css";
 import { sendLogin } from "../../apis/Auth";
 
 const Login = () => {
+    
     const [userData, setUserData] = useState({
         //initialization 
         email: "",
         password: "",
     });
+    const handleBack = () => {
+        console.log("clicked");
+        navigate("/");
+    }
+    const [error, setError] = useState(null);
+    const [openSnackbar, setOpenSnackbar] = useState(false); // State to control Snackbar visibility
 
+    
     //creating a button that is diabled until the user satisfies every textbox, to protect the server from spamming the login request button
     const [disableButton, setDisableButton] = useState(true);
     //using navigate to route and link the pages
@@ -25,12 +33,19 @@ const Login = () => {
             if (result?.user_id) {
                 navigate(`../main/${result.user_id}`);
             }
+            else{
+                setError('Invalid email or password.');
+                setOpenSnackbar(true);
+            }
         });
         setUserData({
             email: "",
             password: "",
         });
     };
+    const handleSnackbarClose=()=>{
+        setOpenSnackbar(false);
+    }
     //nvigates to the register page once clicked
     const handleRegister = () => {
         console.log("clicked");
@@ -57,6 +72,10 @@ const Login = () => {
     };
 
     return (
+        <div> 
+        <div className="back-button">
+        <Button variant="outlined" sx={{color:'#EFFCFF', border:'1px solid #EFFCFF;'}} className="back-button" onClick={handleBack}> Back</Button>
+        </div>
         <div className="background"
             style={{
                 width: "100%",
@@ -106,6 +125,16 @@ const Login = () => {
                 onChange={handleInputChange}
                 name="password"
             />
+            <Snackbar
+                open={openSnackbar}
+                autoHideDuration={6000}
+                onClose={handleSnackbarClose}
+                style={{ zIndex: 9999 }}
+            >
+                <Alert severity="error">{error}</Alert>
+                {/* <SnackbarContent sx={{color:'EFFCFF'}} message={error} /> */}
+            </Snackbar>
+
             <Button
                 disabled={disableButton}
                 variant="contained"
@@ -123,6 +152,7 @@ const Login = () => {
             >
                 Don't Have an Account yet? click here to Register
             </Button>
+        </div>
         </div>
     );
 };
