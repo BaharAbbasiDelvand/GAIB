@@ -29,11 +29,12 @@ const LandingPage =() => {
             <Button onClick={handleRegister} style={{cursor: "pointer", color:'#EFFCFF', backgroundColor:'#1976D2'}}> Get started! </Button>
             </div>
             <p className="text">
-            You can click here to download the extension! by downloading the extension, you can run and generate the testcases all in your VSCode environment!
+            You can click here to download the VSCode extension. By downloading the extension, you can run and generate the testcases all within your VSCode environment. 
             </p>
             <div className="down" style={{'&:hover': { backgroundColor: '#D40000', borderColor: '#030637', boxShadow: 'none',},}}> 
                 <DownloadButton/>
             </div>
+            <p> If you have any questions on how certain </p>
             <div>
                 <Documentation/>
             </div>
