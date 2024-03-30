@@ -1,11 +1,103 @@
-.reglog{
-    display: flex;
-    margin-bottom: 50px;
+.attribute-box {
+    width: calc(33.33% - 15px);
+    text-align: center;
+    line-height: 1.5;
 }
-.divider{
+
+.attribute-section-top {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
     background-color: #EFFCFF;
-    margin-right: 10%;
-    margin-left: 10%;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(3,6,55);
+    background: linear-gradient(rgba(3,6,55,1) 13%, rgba(10,47,84,1) 100%);
+    min-height: 100vh;
+
+}
+
+.divider {
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(3,6,55);
+    background: linear-gradient(rgba(3,6,55,1) 13%, rgba(10,47,84,1) 100%);
+    min-height: 100vh;
+
+}
+
+.divider {
     width: 80%;
-    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.attribute-section-coverage-report {
+    background-color: #EFFCFF;
+    width: calc(100% );
+    border-radius: 10px;
+    margin: 30px 0px;
+    padding: 20px;
+    height: auto;
+    overflow: auto;
+    text-align: center;
+}
+.attribute-section-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.attribute-section {
+    background-color: #EFFCFF;
+    width: calc(50% - 20px); 
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    height: 200px; 
+    overflow: auto;
+}
+
+.attribute-section::-webkit-scrollbar {
+    width: 8px;
+}
+
+.attribute-section::-webkit-scrollbar-thumb {
+    background-color: #8AC8E5;
+    border-radius: 10px;
+}
+
+.attribute-section::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
 }

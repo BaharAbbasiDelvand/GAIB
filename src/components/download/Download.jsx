@@ -3,16 +3,9 @@ import Button from '@mui/material/Button';
 
 const handleDownload = () => {
   // dummy file  
-  const fileContent = 'This is a test file content';
-  const blob = new Blob([fileContent], { type: 'text/plain' });
-  const anchor = document.createElement('a');
-  anchor.href = window.URL.createObjectURL(blob);
-  anchor.download = 'example.txt';
+  window.open("https://marketplace.visualstudio.com/items?itemName=GAIB.genai", "_blank");
 
-  anchor.click();
-
-  //remove the anchor
-  window.URL.revokeObjectURL(anchor.href);
+  
 };
 
 const DownloadButton = () => {

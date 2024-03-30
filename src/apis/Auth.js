@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Have this when u want to run it locally
-const url = "http://127.0.0.1:5001";
+const url = "http://130.113.68.57:5000";
 
 // Have this hard coded for now, but then use environment variable
 // require('dotenv').config();
