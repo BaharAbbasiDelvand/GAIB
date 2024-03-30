@@ -19,17 +19,17 @@ const MainPage = () => {
         navigate("/");
     }
     
-    useEffect(() => {
-        const promise = authenticateUser({ user_id });
-        setFirstRender(true);
-        promise.then((result) => {
-            if (result?.email) {
-                return;
-                return;
-            }
-            navigate("../../");
-        });
-    }, [result]);
+    // useEffect(() => {
+    //     const promise = authenticateUser({ user_id });
+    //     setFirstRender(true);
+    //     promise.then((result) => {
+    //         if (result?.email) {
+    //             return;
+    //             return;
+    //         }
+    //         navigate("../../");
+    //     });
+    // }, [result]);
 
     // useEffect(() => {
     //     const resultsPromise = getResult({ id: user_id });
@@ -87,9 +87,7 @@ const MainPage = () => {
             <div className="divider">{renderResult()}</div>
             <Hiw/>
             <Button variant="outlined" sx={{color:'#EFFCFF', border:'1px solid #EFFCFF', position:'absolute', top:'30px'}} className="back-button" onClick={handleBack}> Back</Button>
-
-            <div className="divider">{renderResult()}</div>
-            <Hiw/>
+    
         </div>
     );
 };
