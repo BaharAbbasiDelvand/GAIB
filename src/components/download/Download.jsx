@@ -2,7 +2,6 @@ import React from 'react';
 import Button from '@mui/material/Button';
 
 const handleDownload = () => {
-  // dummy file  
   window.open("https://marketplace.visualstudio.com/items?itemName=GAIB.genai", "_blank");
 
   

@@ -4,6 +4,14 @@ import "./text.css";
 const Howitworkstext = () => {
     return (
         <div>
+            <b className="subpoint1">
+                <li>If your main page is blank, it is because you need to run the extension first while you are logged in, and then your stats will appear here once you are done. </li>
+            </b>
+            <b className="subpoint1"><li>
+                If you would like to rerun the tests, please refresh the page to
+                get new stats afterwards - for now, the page does not
+                automatically refresh.</li>
+            </b>
             <li>
                 <strong>Accuracy: </strong> the number of passed test cases/the
                 number of total test cases.{" "}
@@ -54,11 +62,7 @@ const Howitworkstext = () => {
                     [F]atal for errors which prevented further processing
                 </li>
             </li>
-            <b>
-                If you would like to rerun the tests, please refresh the page to
-                get new stats afterwards - for now, the page does not
-                automatically refresh.
-            </b>
+            
         </div>
     );
 };

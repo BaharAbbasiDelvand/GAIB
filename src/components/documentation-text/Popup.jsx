@@ -12,7 +12,7 @@ const Popup = () => {
             <li><strong>FileParse:</strong>The module FileParse processes source files to prepare them for further analysis. It splits large blocks of source code into manageable chunks based on a specified token limit, using the tiktoken library to ensure the encoding aligns with that used by OpenAI, as GPT models have input size constraints.</li>
             <li><strong>ModuleSplitter:</strong>The module ModuleSplitter is a tool for extraction of relevant information from code files and managing this data through a MongoDB database. It establishes a connection to the database to store and retrieve information, identifies and categorizes functions along with their dependencies on external libraries, and generates mappings between code functions and their corresponding test assertions. It also offers methods to insert detailed records of code modules, test cases, and library dependencies into the database. </li>
             <li><strong>Main:</strong>This module Main connects the whole pipeline of the automated testing process. By integrating functionalities from related modules like TestCaseGenerator, ExecutionEngine, and ModuleSplitter, it manages test cases, analyzes test results, and improves code quality through targeted testing strategies.</li>
-            <li><strong>Extension:</strong></li>
+    
 
         
         

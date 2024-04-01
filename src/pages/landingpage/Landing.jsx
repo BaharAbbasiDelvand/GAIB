@@ -38,9 +38,6 @@ const LandingPage =() => {
                     <Documentation/>
                 </div>
             </div>
-            {/* <div className="image-container">
-                <img src={bg} alt="Example" />
-            </div> */}
         </div>
         </div>
     )

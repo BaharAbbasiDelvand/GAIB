@@ -37,7 +37,7 @@ const Register = () => {
                 nav(`../main/${result.user_id}`);
             }
             else{
-                setError('The user already exists, or an incorrect form of email address was input.');
+                setError('The user already exists, the passwords do not match, or an incorrect form of email address was input.');
                 setOpenSnackbar(true);
             }
         });
